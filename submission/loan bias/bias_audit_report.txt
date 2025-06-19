@@ -1,0 +1,34 @@
+=== Bias Audit Report ===
+
+1. Gender-based Approval Rate Disparities:
+        selection_rate  false_positive_rate  false_negative_rate
+Gender                                                          
+Female        0.821429             0.615385             0.000000
+Male          0.847134             0.576923             0.019048
+
+Demographic Parity Difference: 0.026
+
+2. Regulatory Compliance:
+GDPR Article 22 Compliance (Excerpt):
+- Individuals have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning them or similarly significantly affects them.
+- The model implements automated decision-making with human oversight. Applicants have the right to request human intervention. Clear explanation of the decision-making process is provided.
+
+ECOA Guidelines Compliance (Excerpt):
+- Prohibits discrimination in any aspect of a credit transaction on the basis of gender and other protected characteristics.
+- Model is regularly audited for disparate impact. Demographic parity constraints are implemented. Transparent documentation of approval criteria.
+
+3. Mitigation Strategies:
+a) Data Collection and Preprocessing:
+- Implement balanced sampling across gender groups. Regular monitoring of feature distributions. Periodic retraining with updated data.
+
+b) Model Training:
+- Add demographic parity constraints during training. Use reweighting techniques to balance the training data. Implement post-processing techniques to adjust predictions.
+
+c) Monitoring and Maintenance:
+- Regular fairness audits. Continuous monitoring of approval rates by gender. Periodic model retraining with updated fairness constraints.
+
+4. Key Findings:
+- Demographic Parity Difference: 0.026
+- Gender-based approval rate disparities exist in the model
+- False positive and false negative rates vary by gender
+- Model shows potential bias in loan approval decisions
